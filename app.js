@@ -36,6 +36,17 @@ app.get("/books", async (request, response) => {
   }
 });
 
+// get count of books
+app.get("/books/count", async (req, res) => {
+  try {
+    const books = db.collection("books");
+    const count = await books.find().count();
+    res.status(200).json({ count });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 // get single book
 app.get("/books/:id", async (request, response) => {
   const id = request.params.id;

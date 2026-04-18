@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const { connectToDB, getDb } = require("./db");
 const { ObjectId } = require("mongodb");
 
 // init app and middleware
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 let db;

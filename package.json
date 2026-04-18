@@ -1,9 +1,10 @@
 {
-  "name": "mongodb",
+  "name": "booksapi",
   "version": "1.0.0",
-  "description": "Complete mongodb course",
-  "main": "index.js",
+  "description": "Bookstore API with MongoDB",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

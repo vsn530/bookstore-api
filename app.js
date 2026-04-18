@@ -9,7 +9,8 @@ app.use(express.json());
 let db;
 connectToDB((err) => {
   if (!err) {
-    app.listen(3000, () => console.log("App listening at port 3000"));
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
     db = getDb();
   }
 });
